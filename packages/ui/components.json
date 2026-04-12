@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "base-lyra",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "config": "",
+    "css": "src/styles/globals.css",
+    "baseColor": "neutral",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "iconLibrary": "lucide",
+  "aliases": {
+    "components": "@kha-thien-logistics/ui/components",
+    "utils": "@kha-thien-logistics/ui/lib/utils",
+    "hooks": "@kha-thien-logistics/ui/hooks",
+    "lib": "@kha-thien-logistics/ui/lib",
+    "ui": "@kha-thien-logistics/ui/components"
+  },
+  "menuColor": "default",
+  "menuAccent": "subtle",
+  "registries": {}
+}

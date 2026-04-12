@@ -1,0 +1,3 @@
+{
+  "extends": "@kha-thien-logistics/config/tsconfig.base.json"
+}

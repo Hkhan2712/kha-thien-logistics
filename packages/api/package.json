@@ -1,0 +1,28 @@
+{
+  "name": "@kha-thien-logistics/api",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@kha-thien-logistics/db": "workspace:*",
+    "@kha-thien-logistics/env": "workspace:*",
+    "@orpc/client": "catalog:",
+    "@orpc/openapi": "catalog:",
+    "@orpc/server": "catalog:",
+    "@orpc/zod": "catalog:",
+    "dotenv": "catalog:",
+    "next": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@kha-thien-logistics/config": "workspace:*",
+    "typescript": "^5"
+  }
+}

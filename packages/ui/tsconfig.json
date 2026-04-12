@@ -1,0 +1,13 @@
+{
+  "extends": "@kha-thien-logistics/config/tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "paths": {
+      "@kha-thien-logistics/ui/*": ["./src/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules"]
+}
