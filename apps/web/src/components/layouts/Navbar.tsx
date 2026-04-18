@@ -15,6 +15,7 @@ const navLinks: NavLink[] = [
     { label: "Trang Chủ", to: "/" },
     { label: "Dịch Vụ", to: "/services" },
     { label: "Về Chúng Tôi", to: "/about-us" },
+    { label: "Gửi Hàng", to: "/shipping" },
     { label: "Liên Hệ", to: "/contact" },
 ];
 
