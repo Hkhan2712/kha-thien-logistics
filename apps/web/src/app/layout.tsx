@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-
+import { Be_Vietnam_Pro } from "next/font/google";
 // import "../styles/index.css";
 import "@kha-thien-logistics/ui/globals.css";
 import "../styles/theme.css";
