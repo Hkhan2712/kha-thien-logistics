@@ -1,0 +1,84 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="DevOps Architecture">
+    <mxGraphModel dx="1434" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- USER -->
+        <mxCell id="user" value="User (Customer)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="50" y="200" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- FRONTEND -->
+        <mxCell id="frontend" value="Next.js (Vercel)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="250" y="180" width="160" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- API -->
+        <mxCell id="api" value="API Routes (Serverless)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="450" y="180" width="180" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- DATABASE -->
+        <mxCell id="db" value="Supabase (PostgreSQL)" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#f8cecc;" vertex="1" parent="1">
+          <mxGeometry x="700" y="160" width="160" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- QUEUE -->
+        <mxCell id="queue" value="Upstash (Redis Queue)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="700" y="320" width="160" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- WORKER -->
+        <mxCell id="worker" value="Cloudflare Worker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="950" y="240" width="180" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- TELEGRAM -->
+        <mxCell id="telegram" value="Telegram Bot (Notify Staff)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="240" width="200" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- FACEBOOK -->
+        <mxCell id="facebook" value="Facebook / Zalo Webhook" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="250" y="350" width="200" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- EDGES -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;" edge="1" parent="1" source="user" target="frontend">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;" edge="1" parent="1" source="frontend" target="api">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;" edge="1" parent="1" source="api" target="db">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;" edge="1" parent="1" source="api" target="queue">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;" edge="1" parent="1" source="queue" target="worker">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;" edge="1" parent="1" source="worker" target="telegram">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;" edge="1" parent="1" source="facebook" target="worker">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;" edge="1" parent="1" source="worker" target="db">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
